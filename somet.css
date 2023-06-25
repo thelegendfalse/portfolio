@@ -1,0 +1,107 @@
+body {
+  background-color: hsla(50, 33%, 25%, .75);
+  cursor: url(‘Dot-Symbol-Free-PNG.png’), auto;
+}
+
+.titles {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 100px;
+  font-family: 'Courier New', monospace;
+  color: black;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+}
+
+.aboutme {
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Courier New', monospace;
+  font-size: 40px;
+  border-radius: 10px;
+  height: 50px;
+  border: 10px solid;
+  color: rgb(230, 255, 230);
+  margin-bottom: 20px;
+  transition: transform 0.5s;
+}
+
+.aboutme:hover {
+  transform: scale(1.1);
+}
+
+.chrollo {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.chrollo:hover {
+  opacity: 0.3;
+}
+
+.kll {
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 100px;
+  font-family: 'Courier New', monospace;
+  color: black;
+}
+
+div {
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  font-family: 'Courier New', monospace;
+  transition: transform 2s;
+}
+
+div:hover {
+  transform: scale(1) translate(10%, 50%);
+}
+
+.Discord {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.7s ease-in-out;
+  z-index: 2;
+}
+
+.Discord:hover {
+  transform: rotate(360deg);
+}
+
+.false {
+  position: absolute;
+  bottom: 4em;
+  transition: bottom 0.2s;
+  z-index: 1;
+}
+
+.false:hover {
+  bottom: 5em;
+}
+
