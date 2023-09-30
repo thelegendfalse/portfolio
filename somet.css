@@ -1,42 +1,17 @@
 body {
-  background-color: hsla(50, 33%, 25%, .75);
-  cursor: url(‘Dot-Symbol-Free-PNG.png’), auto;
+  background: linear-gradient(45deg, #f1f1f1, #610fbe, #ffffff, #FF1493);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s infinite alternate;
+  cursor: url('Dot-Symbol-Free-PNG.png'), auto;
 }
 
-.titles {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  font-size: 100px;
-  font-family: 'Courier New', monospace;
-  color: black;
-}
-
-.container {
-  position: relative;
-  height: 100vh;
-}
-
-.aboutme {
-  text-decoration: none;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Courier New', monospace;
-  font-size: 40px;
-  border-radius: 10px;
-  height: 50px;
-  border: 10px solid;
-  color: rgb(230, 255, 230);
-  margin-bottom: 20px;
-  transition: transform 0.5s;
-}
-
-body {
-  background-color: hsla(50, 33%, 25%, .75);
-  cursor: url(‘Dot-Symbol-Free-PNG.png’), auto;
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 .titles {
@@ -74,18 +49,6 @@ body {
   transform: scale(1.1);
 }
 
-.chrollo {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  object-fit: cover;
-  transition: transform 0.5s;
-}
-
 .chrollo:hover {
   opacity: 0.3;
 }
@@ -106,17 +69,40 @@ div {
   top: 50%;
   left: 0%;
   font-family: 'Courier New', monospace;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
+div::after {
+  content: "|"; /* Typing cursor */
+  animation: cursorBlink 0.7s infinite alternate;
+}
 
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes cursorBlink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 
 .Discord {
   position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  width: 200px;
-  height: 200px;
+  top: 49.5%;
+  right: 36.5%;
+  transform: translateY(-20%);
+  width: 39.6px;
+  height: 39.6px;
   border-radius: 50%;
   object-fit: cover;
   transition: transform 0.7s ease-in-out;
@@ -140,7 +126,7 @@ div {
 
 .fname {
   border-color: blue;
-    border-radius: 10%;
+  border-radius: 10%;
 }
 
 .divi {
@@ -148,6 +134,58 @@ div {
   background-color: grey;
   width: 1950px;
   height: 50px;
-  top: 0%
+  top: 0%;
 }
 
+.diss {
+  width: 440px;
+  position: absolute;
+  bottom: 2%;
+  right: 76.4%;
+}
+
+.Fortnite {
+  background-color: darkred;
+  border-radius: 50px 20px;
+  border-color: white;
+  width: 1910px;
+  height: 10px;
+  top: 0%;
+  right: 20.5%;
+}
+
+.Fortnite2 {
+  background-color: darkseagreen;
+  border-radius: 20px 20px;
+  border-color: white;
+  width: 1910px;
+  height: 20px;
+  top: 1.2%;
+  right: 20.5%;
+}
+
+.yt {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 40%;
+  right: 10%;
+  transition: transform 0.5s;
+}
+
+.yt:hover {
+  transform: scale(1.1);
+}
+
+.glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  position: absolute;
+  top: 52%;
+  right: 20.5%;
+  width: 1200px;
+}
