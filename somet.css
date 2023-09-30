@@ -61,6 +61,11 @@ body {
   font-size: 100px;
   font-family: 'Courier New', monospace;
   color: black;
+  transition: transform 0.5s;
+}
+
+.kll:hover {
+  transform: scale(1);
 }
 
 div {
